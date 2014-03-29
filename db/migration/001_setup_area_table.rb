@@ -1,14 +1,14 @@
-require 'sequel'
-require 'pp'
+Sequel.migration do
+  up do
+    create_table(:areas) do
+      primary_key :area_id
+      String :name, :null=>false
+      String :display_name, :null=>true
+      String :size, :null=>false
+    end
+  end
 
-
-DB = Sequel.connect('sqlite://dev.db')
-
-# DB.run("create table t (a text, b text)")
-DB.run("drop table t")
-
-# t = DB.from(:t)
-
-# t.each do |row|
-#   pp row[:a]
-# end
+  down do
+    drop_table(:areas)
+  end
+end
