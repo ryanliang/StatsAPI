@@ -16,6 +16,7 @@ Sequel.migration do
       String :comment, :null=>true
       Integer :total, :null=>false
       Integer :failed, :null=>false
+      Float :duration, :null=>false
       DateTime :created_at, :null=>false
       DateTime :updated_at, :null=>false
       String :report_date, :null=>true
