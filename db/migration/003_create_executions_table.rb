@@ -13,12 +13,12 @@ Sequel.migration do
       String :browser, :null=>false
       String :major_version, :null=>false
       String :minor_version, :null=>false
-      String :comment, :null=>false
+      String :comment, :null=>true
       Integer :total, :null=>false
       Integer :failed, :null=>false
-      DateTime :created_on, :null=>false
-      DateTime :updated_on, :null=>false
-      String :report_date, :null=>false
+      DateTime :created_at, :null=>false
+      DateTime :updated_at, :null=>false
+      String :report_date, :null=>true
     end
   end
 
