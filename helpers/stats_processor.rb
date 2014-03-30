@@ -5,13 +5,12 @@ class StatsProcessor
     area = Area.first(test_suite: suite, name: name, size: size)
 
     if area.nil?
-      Area.new do |a|
+      area = Area.new do |a|
         a.test_suite = suite
         a.name = name
         a.size = size
         a.save
       end
-      area = Area.first(test_suite: suite, name: name, size: size)
     end
 
     Execution.new do |e|
