@@ -19,7 +19,7 @@ Sequel.migration do
       Float :duration, :null=>false
       DateTime :created_at, :null=>false
       DateTime :updated_at, :null=>false
-      String :report_date, :null=>true
+      String :report_date, :null=>false
     end
   end
 

@@ -4,7 +4,8 @@ Sequel.migration do
       primary_key :area_id
       String :name, :null=>false
       String :display_name, :null=>true
-      String :size, :null=>false
+      String :size, :null=>true
+      String :test_suite, :null=>false
     end
   end
 
