@@ -11,6 +11,7 @@ class Execution < Sequel::Model
     self.total    = stats[1]
     self.failed   = stats[2]
 
+    self.report_date = (self.created_at + 3600).strftime("%Y-%m-%d")
     super
   end
 
